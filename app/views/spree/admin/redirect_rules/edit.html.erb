@@ -1,0 +1,16 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+Editing redirect rule
+<% end %>
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @country } %>
+
+<%= form_for [:admin, @redirect_rule] do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    <div class="clear"></div>
+    <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
+<% end %>
+

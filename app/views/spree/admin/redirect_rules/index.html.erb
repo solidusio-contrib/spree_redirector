@@ -1,0 +1,37 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+  Listing redirect rules
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to 'New redirect rule', new_object_url, { :icon => 'icon-plus' } %>
+  </li>
+<% end %>
+
+<table class="index">
+  <thead>
+    <tr>
+      <th>Active</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @redirect_rules.each do |redirect_rule| %>
+      <tr>
+        <td><%= redirect_rule.active %></td>
+        <td><%= redirect_rule.source %></td>
+        <td><%= redirect_rule.destination %></td>
+        <td class="actions">
+          <%= link_to '', edit_admin_redirect_rule_path(redirect_rule), class: 'edit icon_link with-tip icon-edit no-text' %>
+          &nbsp;
+          <%= link_to '', admin_redirect_rule_path(redirect_rule), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-resource icon_link with-tip icon-trash no-text' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

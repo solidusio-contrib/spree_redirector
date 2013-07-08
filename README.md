@@ -1,7 +1,7 @@
 SpreeRedirector
 ===============
 
-Introduction goes here.
+A spree admin interface to redirector, a rack middleware for HTTP redirects.
 
 Installation
 ------------
