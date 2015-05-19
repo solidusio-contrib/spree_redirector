@@ -26,9 +26,9 @@
         <td><%= redirect_rule.source %></td>
         <td><%= redirect_rule.destination %></td>
         <td class="actions">
-          <%= link_to '', edit_admin_redirect_rule_path(redirect_rule), class: 'edit icon_link with-tip icon-edit no-text' %>
+          <%= link_to '', edit_admin_redirect_rule_path(redirect_rule), class: 'edit icon_link with-tip fa fa-edit no-text' %>
           &nbsp;
-          <%= link_to '', admin_redirect_rule_path(redirect_rule), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-resource icon_link with-tip icon-trash no-text' %>
+          <%= link_to '', admin_redirect_rule_path(redirect_rule), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-resource icon_link with-tip fa fa-trash no-text' %>
         </td>
       </tr>
     <% end %>
