@@ -1,14 +1,19 @@
 require 'spec_helper'
 
-describe Spree::Admin::RedirectRulesController do
+RSpec.describe Spree::Admin::RedirectRulesController, type: :controller do
   # resourceful spree admin controller
-  specify{ described_class.ancestors.should include(Spree::Admin::ResourceController) }
+  specify do
+    expect(described_class.ancestors).to include(Spree::Admin::ResourceController)
+  end
 
-  specify { controller.send(:model_class).should == ::RedirectRule }
+  specify do
+    expect(controller.send(:model_class)).to eq ::RedirectRule
+  end
 
   describe 'build_resource' do
-    subject{ controller.send(:build_resource) }
-    it{ should be_a(RedirectRule) }
-    it{ should be_active }
+    subject { controller.send(:build_resource) }
+
+    it { is_expected.to be_a(RedirectRule) }
+    it { is_expected.to be_active }
   end
 end
