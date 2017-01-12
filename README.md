@@ -1,7 +1,7 @@
 SolidusRedirector
 ===============
 
-A spree admin interface to redirector, a rack middleware for HTTP redirects.
+A Solidus admin interface to redirector, a rack middleware for HTTP redirects.
 
 Installation
 ------------
@@ -26,15 +26,7 @@ Be sure to bundle your dependencies and then create a dummy test app for the spe
 
 ```shell
 bundle
-bundle exec rake test_app
-bundle exec rspec spec
-```
-
-When testing your applications integration with this extension you may use it's factories.
-Simply add this require statement to your spec_helper:
-
-```ruby
-require 'solidus_redirector/factories'
+bundle exec rake
 ```
 
 Copyright (c) 2013 [name of extension creator], released under the New BSD License
