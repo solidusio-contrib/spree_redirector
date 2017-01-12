@@ -1,22 +1,22 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_redirector'
-  s.version     = '2.0.3'
-  s.summary     = 'A spree admin interface to redirector'
-  s.description = 'A spree admin interface to redirector'
-  s.required_ruby_version = '>= 1.9.3'
+  s.name        = 'solidus_redirector'
+  s.version     = '0.1.0'
+  s.summary     = 'A Solidus admin interface to redirector'
+  s.description = 'A Solidus admin interface to redirector'
+  s.required_ruby_version = '>= 2.2.2'
 
   s.author    = 'John Hawthorn'
   s.email     = 'john@freerunningtech.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.homepage  = 'https://solidus.io'
 
-  #s.files       = `git ls-files`.split("\n")
-  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files        = `git ls-files`.split("\n")
+  s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.0.3'
+  s.add_dependency 'solidus_core', '~> 1.4'
   s.add_dependency 'redirector'
 
   s.add_development_dependency 'capybara', '~> 2.1'

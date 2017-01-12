@@ -28,8 +28,8 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
 
-# Requires factories defined in lib/spree_redirector/factories.rb
-require 'spree_redirector/factories'
+# Requires factories defined in lib/solidus_redirector/factories.rb
+require 'solidus_redirector/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
