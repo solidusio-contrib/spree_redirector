@@ -5,7 +5,7 @@ module SolidusRedirector
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=solidus_redirector'
+        run 'bundle exec rake redirector_engine:install:migrations'
       end
 
       def run_migrations
