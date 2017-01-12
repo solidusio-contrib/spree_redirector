@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'solidus_core', '~> 1.4'
+  s.add_dependency 'solidus_backend', '~> 1.4'
   s.add_dependency 'redirector'
 
   s.add_development_dependency 'capybara', '~> 2.1'

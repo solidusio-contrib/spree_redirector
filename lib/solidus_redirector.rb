@@ -1,3 +1,3 @@
+require 'solidus_backend'
 require 'redirector'
-require 'solidus_core'
 require 'solidus_redirector/engine'
