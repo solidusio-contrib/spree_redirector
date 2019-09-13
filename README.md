@@ -1,7 +1,7 @@
 SolidusRedirector
 ===============
 
-[![Build Status](https://travis-ci.org/solidusio-contrib/solidus_redirector.svg?branch=master)](https://travis-ci.org/solidusio-contrib/solidus_redirector)
+[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_redirector.svg?style=svg)](https://circleci.com/gh/solidusio-contrib/solidus_redirector)
 
 A Solidus admin interface to redirector, a rack middleware for HTTP redirects.
 
