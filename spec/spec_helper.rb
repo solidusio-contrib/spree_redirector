@@ -1,13 +1,22 @@
-# Run Coverage report
-require 'simplecov'
-SimpleCov.start 'rails'
+# frozen_string_literal: true
 
 # Configure Rails Environment
-ENV['RAILS_ENV'] = 'test'
+ENV['RAILS_ENV'] ||= 'test'
 
-require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+# Run Coverage report
+require 'solidus_dev_support/rspec/coverage'
 
-require 'rspec/rails'
+require File.expand_path('dummy/config/environment.rb', __dir__)
+
+# Requires factories and other useful helpers defined in spree_core.
+require 'solidus_dev_support/rspec/feature_helper'
+
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
+
+# Requires factories defined in lib/solidus_redirector/factories.rb
+require 'solidus_redirector/factories'
 
 RSpec.configure do |config|
   # == Mock Framework
@@ -20,9 +29,7 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.color = true
 
-  # Capybara javascript drivers require transactional fixtures set to false, and we use DatabaseCleaner
-  # to cleanup after each test instead.  Without transactional fixtures set to false the records created
-  # to setup a test will be unavailable to the browser, which runs under a seperate server instance.
+  config.infer_spec_type_from_file_location!
   config.use_transactional_fixtures = false
 
   config.fail_fast = ENV['FAIL_FAST'] || false

@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
+require 'spree/core'
+
 module SolidusRedirector
   class Engine < Rails::Engine
-    isolate_namespace Spree
-    engine_name 'solidus_redirector'
+    include SolidusSupport::EngineExtensions::Decorators
 
-    config.autoload_paths += %W(#{config.root}/lib)
+    isolate_namespace ::Spree
+
+    engine_name 'solidus_redirector'
 
     # use rspec for tests
     config.generators do |g|
@@ -16,6 +21,6 @@ module SolidusRedirector
       end
     end
 
-    config.to_prepare &method(:activate).to_proc
+    config.to_prepare(&method(:activate).to_proc)
   end
 end

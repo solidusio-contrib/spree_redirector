@@ -31,4 +31,4 @@ bundle
 bundle exec rake
 ```
 
-Copyright (c) 2013 [name of extension creator], released under the New BSD License
+Copyright (c) 2013-2020 John Hawthorn and contributors, released under the New BSD License
